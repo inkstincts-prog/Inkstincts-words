@@ -262,8 +262,50 @@ footer p{font-family:'Crimson Pro',serif;font-style:italic;color:var(--text-dim)
   .th-row{grid-template-columns:1fr;}.cmt-row{grid-template-columns:1fr auto;}
   .cmt-name{display:none;}.img-strip{grid-template-columns:1fr;}.rm-strip{flex-direction:column;text-align:center;}
   .about-head-text{padding:3rem 2rem;}
+  /* Touch-friendly tap targets */
+  .btn{min-height:48px;padding:1rem 2rem;}
+  .like-btn,.cmt-toggle,.post-btn{min-height:44px;}
 }
-@media(max-width:480px){.hero-title{font-size:3rem;}.filter-nav{padding:.75rem 2vw;}.f-btn{font-size:.62rem;padding:.5rem .7rem;}}
+@media(max-width:480px){
+  /* Typography */
+  .hero-title{font-size:clamp(2.4rem,10vw,3rem);}
+  .s-title{font-size:clamp(1.6rem,6vw,2.4rem);}
+  .sub-title{font-size:clamp(1.6rem,6vw,2.4rem);}
+  .astro-text blockquote{font-size:1.3rem;padding-left:1.25rem;}
+  /* Filter nav — horizontal scroll instead of wrap */
+  .filter-nav{padding:.75rem 2vw;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;-webkit-overflow-scrolling:touch;}
+  .filter-nav::-webkit-scrollbar{display:none;}
+  .f-btn{font-size:.62rem;padding:.5rem .7rem;white-space:nowrap;flex-shrink:0;}
+  /* Section padding */
+  .hero{padding:3rem 4vw 4rem;}
+  .featured{padding:3rem 4vw;}
+  .topic-block{padding:2.5rem 4vw;}
+  .night-sec{padding:3rem 4vw;}
+  .sub-strip{padding:3rem 4vw;}
+  .sub-strip::before{width:90%;}
+  .about-body{padding:2rem 4vw;}
+  .about-head-text{padding:2rem 4vw;}
+  .astro-text{padding:2rem 4vw;}
+  /* Hero actions stack */
+  .hero-actions{flex-direction:column;gap:.75rem;}
+  .hero-actions .btn{width:100%;text-align:center;}
+  /* Cards */
+  .para-card{padding:1.25rem 1.25rem 1rem;}
+  .qcard-xl p{padding:1.75rem 1.25rem 1.25rem;font-size:1.15rem;}
+  .qcard-lg p{padding:1.25rem 1rem 1rem;}
+  .qcard-md p{padding:1rem .9rem .75rem;}
+  .qcard-foot{flex-wrap:wrap;gap:.5rem;}
+  .mc{padding:1.75rem 1.25rem;}
+  /* Comment input stacks */
+  .cmt-row{grid-template-columns:1fr;gap:.4rem;}
+  .cmt-post{width:100%;}
+  /* Misc */
+  .rm-strip{padding:1.25rem 1rem;}
+  .modal-box{padding:2rem 1.25rem;}
+  .t-header{gap:.75rem;flex-wrap:wrap;}
+  .t-num{font-size:2.5rem;}
+  .about-pull{padding-left:1.25rem;font-size:1.15rem;}
+}
 </style>
 </head>
 <body>
